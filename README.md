@@ -1,6 +1,5 @@
 # Capilé Drinks · Sistema de Gestão & Cardápio Interativo
 
-![Capilé Drinks](https://images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg)
 
 O **Capilé Drinks** é uma aplicação web completa projetada para um bar de drinks autorais. O projeto é dividido em duas frentes: uma landing page interativa com cardápio digital voltada para o cliente, e um painel de controle administrativo (Dashboard) voltado para a gestão do bar.
 
