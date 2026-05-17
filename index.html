@@ -2335,6 +2335,52 @@
     document.addEventListener("keydown", e => { if (e.key === "Escape") { closeModal(); closeCart(); closeCheckout(); } });
 
     // ============================================================
+    // REAL-TIME STATUS
+    // ============================================================
+    function updateStatus() {
+      const now = new Date();
+      let day = now.getDay();
+      let hour = now.getHours();
+      
+      // if it's before 5am, we consider it the previous business day
+      if (hour < 5) {
+        day = (day + 6) % 7;
+      }
+
+      // 0: Dom, 1: Seg, 2: Ter, 3: Qua, 4: Qui, 5: Sex, 6: Sab
+      // open/close values in 24h format (hours past midnight represented as >24)
+      const schedule = {
+        0: { open: 16, close: 24, text: "00h" },
+        1: null,
+        2: null,
+        3: { open: 18, close: 24, text: "00h" },
+        4: { open: 18, close: 25, text: "01h" },
+        5: { open: 18, close: 26, text: "02h" },
+        6: { open: 16, close: 26, text: "02h" }
+      };
+
+      const today = schedule[day];
+      const logicHour = now.getHours() < 5 ? now.getHours() + 24 : now.getHours();
+      
+      const txt = document.getElementById("statusTxt");
+      const dot = document.querySelector("#statusPill .dot");
+      
+      if (!today) {
+        txt.textContent = "fechado hoje";
+        dot.style.background = "var(--pink)";
+        dot.style.boxShadow = "0 0 10px var(--pink)";
+      } else if (logicHour >= today.open && logicHour < today.close) {
+        txt.textContent = `aberto · até ${today.text}`;
+        dot.style.background = "var(--neon)";
+        dot.style.boxShadow = "0 0 10px var(--neon)";
+      } else {
+        txt.textContent = "fechado no momento";
+        dot.style.background = "var(--pink)";
+        dot.style.boxShadow = "0 0 10px var(--pink)";
+      }
+    }
+
+    // ============================================================
     // BOOT
     // ============================================================
     loadOrder();
@@ -2342,6 +2388,8 @@
     renderTabs();
     renderMenu();
     renderDock();
+    updateStatus();
+    setInterval(updateStatus, 60000);
   </script>
 </body>
 <script src="https://cdn.jsdelivr.net/gh/davicjc/FooterDavicjc@main/footer_cjc.js"></script>
