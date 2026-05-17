@@ -11,6 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Boldonse&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vibur" rel="stylesheet">
   <style>
     /* ============================================================
    CAPILÉ — single-file site · mobile-first
@@ -233,6 +234,51 @@
       text-wrap: balance;
     }
 
+    .logo-sub {
+      text-align: center;
+      user-select: none;
+      margin: -16px 0 24px;
+      font: 400 clamp(32px, 8vw, 64px) "Vibur", cursive;
+      color: #e0ffe8;
+      text-shadow: 0 -20px 50px, 0 0 2px, 0 0 1em #3dff86, 0 0 0.5em #3dff86, 0 0 0.1em #3dff86, 0 10px 3px #000;
+      line-height: 1.2;
+    }
+    .logo-sub span {
+      animation: blink linear infinite 2.5s;
+    }
+
+    .logo {
+      text-align: center;
+      user-select: none;
+      margin: 48px 0 24px;
+    }
+    
+    .logo b {
+      font: 400 clamp(64px, 15vw, 120px) "Vibur", cursive;
+      color: #fee;
+      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+      line-height: 1;
+    }
+    
+    .logo b span {
+      animation: blink linear infinite 2s;
+    }
+    
+    .logo b span:nth-of-type(2) {
+      animation: blink linear infinite 3s;
+    }
+    
+    @keyframes blink {
+      78% { color: inherit; text-shadow: inherit; }
+      79% { color: #333; }
+      80% { text-shadow: none; }
+      81% { color: inherit; text-shadow: inherit; }
+      82% { color: #333; text-shadow: none; }
+      83% { color: inherit; text-shadow: inherit; }
+      92% { color: #333; text-shadow: none; }
+      92.5% { color: inherit; text-shadow: inherit; }
+    }
+
     .hero__title em {
       font-family: "Instrument Serif", serif;
       font-style: italic;
@@ -251,7 +297,7 @@
       font-size: 17px;
       color: var(--ink-2);
       max-width: 38ch;
-      margin: 0 auto 24px;
+      margin: 48px auto 24px;
       text-wrap: pretty
     }
 
@@ -302,7 +348,7 @@
     /* photo strip */
     .hero__strip {
       overflow: hidden;
-      margin: -52px -18px 0;
+      margin: 24px -18px 0;
       padding: 52px 0 28px;
       position: relative;
     }
@@ -1708,10 +1754,12 @@
   <section class="hero" id="top">
     <div class="hero__text-col">
       <p class="hero__kicker">bar de drinks autorais · uberlândia</p>
-      <h1 class="hero__title">
-        brinde<br>
-        com a <em>gente</em><span class="blink">.</span>
-      </h1>
+      <div class="logo">
+        <b>C<span>a</span>pilé D<span>r</span>inks</b>
+      </div>
+      <div class="logo-sub">
+        brinde com a g<span>e</span>nte.
+      </div>
       <p class="hero__desc">
         Drinks autorais, comidas pra dividir, plantas penduradas e um quintal cheio de neon. Toca pra montar seu pedido.
       </p>
