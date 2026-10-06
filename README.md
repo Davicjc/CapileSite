@@ -1,5 +1,29 @@
-# Capilé Drinks · Sistema de Gestão & Cardápio Interativo
+<p align="center">
+  <img src=".github/readme/banner.png" alt="CapileSite" width="100%">
+</p>
 
+<p align="center">
+  <img alt="👥 Cliente: Capilé Drinks" src="https://img.shields.io/badge/%F0%9F%91%A5_Cliente%3A_Capil%C3%A9_Drinks-1F6FEB?style=for-the-badge">
+  <a href="https://davicjc.github.io/CapileSite/"><img alt="🌐 Ver o site" src="https://img.shields.io/badge/%F0%9F%8C%90_Ver_o_site-1DB954?style=for-the-badge"></a>
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white">
+</p>
+
+<p align="center">Capilé Drinks: cardápio interativo de drinks autorais e painel de gestão do bar, sem backend.</p>
+
+
+<p align="center">
+  <img src=".github/readme/preview.png" alt="Prévia de CapileSite no computador e no celular" width="100%">
+</p>
+
+### 📸 Telas do sistema
+
+<p align="center">
+  <img src=".github/readme/telas.png" alt="Telas de CapileSite" width="100%">
+</p>
+
+---
 
 O **Capilé Drinks** é uma aplicação web completa projetada para um bar de drinks autorais. O projeto é dividido em duas frentes: uma landing page interativa com cardápio digital voltada para o cliente, e um painel de controle administrativo (Dashboard) voltado para a gestão do bar.
 
@@ -70,3 +94,7 @@ Este projeto foi construído focando em performance, estilo e manutenibilidade a
    - Gere dados de demonstração no botão do Dashboard para ver como os gráficos se comportam!
 
 *Desenvolvido com o intuito de apresentar um sistema de PDV/Gestão moderno e esteticamente envolvente.*
+
+---
+
+<p align="center">Desenvolvido por <a href="https://github.com/Davicjc">Davi Castro</a> · <a href="https://davicjc.com">davicjc.com</a><br><sub>para Capilé Drinks</sub></p>
